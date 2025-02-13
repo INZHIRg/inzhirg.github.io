@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Source Engine - Луночка Адский Босс</title>
+    <title>INZHIR - Source Engine</title>
     <style>
+        /* Подключение шрифтов */
+        @import url('https://fonts.googleapis.com/css2?family=Century+Gothic:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bahnschrift&display=swap');
+
         body {
             background: linear-gradient(135deg, #1e1e2f, #2a2a40);
             color: #fff;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Bahnschrift', sans-serif;
             text-align: center;
             margin: 0;
             padding: 0;
@@ -20,44 +24,46 @@
         }
 
         h1 {
+            font-family: 'Century Gothic', sans-serif;
+            font-weight: bold;
             font-size: 3rem;
             text-transform: uppercase;
-            background: linear-gradient(90deg, #ff9900, #ed9121);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #ff8c42; /* Оранжевый цвет */
+            margin-bottom: 20px;
             animation: glow 2s infinite alternate;
         }
 
-        p {
-            font-size: 1.5rem;
-            margin-top: 20px;
-            background: linear-gradient(90deg, #00c6ff, #0072ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: float 3s ease-in-out infinite;
+        .text-block {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 20px;
+            box-shadow: 0 0 15px rgba(255, 140, 66, 0.5);
+        }
+
+        .text-block p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin: 0;
         }
 
         @keyframes glow {
             0% {
-                text-shadow: 0 0 5px #ff416c, 0 0 10px #ff416c, 0 0 20px #ff416c;
+                text-shadow: 0 0 5px #ff8c42, 0 0 10px #ff8c42, 0 0 20px #ff8c42;
             }
             100% {
-                text-shadow: 0 0 10px #ff4b2b, 0 0 20px #ff4b2b, 0 0 40px #ff4b2b;
-            }
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-3px);
+                text-shadow: 0 0 10px #ff8c42, 0 0 20px #ff8c42, 0 0 40px #ff8c42;
             }
         }
     </style>
 </head>
 <body>
-    <h1>Source Engine</h1>
-    <p>Луночка адский босс</p>
+    <h1>INZHIR</h1>
+    <div class="text-block">
+        <p>
+            Добро пожаловать в на сайт Инжира! В данный момент тут ничего нет :<
+        </p>
+    </div>
 </body>
 </html>

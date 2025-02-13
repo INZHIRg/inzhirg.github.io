@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Bahnschrift&display=swap');
 
         body {
-            background: #0a0a0a; /* Новый задний фон */
+            background: #0a0a0a; /* задний фон */
             color: #fff;
             font-family: 'Bahnschrift', sans-serif;
             text-align: center;
@@ -26,7 +26,7 @@
         h1 {
             font-family: 'Century Gothic', sans-serif;
             font-weight: bold;
-            font-size: 3rem;
+            font-size: 5rem;
             text-transform: uppercase;
             color: #ff8c42; /* Оранжевый цвет */
             margin-bottom: 20px;
@@ -69,19 +69,38 @@
                 text-shadow: 0 0 6px #ff8c42, 0 0 12px #ff8c42; /* Меньше свечения */
             }
         }
+
+        /* Стили для виджета перевода */
+        #google_translate_element {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
     </style>
+    <!-- Скрипт Google Translate -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,ru,es,fr,de,zh-CN,ja', // Добавьте нужные языки
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
+    <div id="google_translate_element"></div>
     <h1>INZHIR</h1>
     <div class="text-block">
         <div class="sub-block">
             <p>
-                Добро пожаловать в на сайт Инжира! В данный момент тут ничего нет :<
+                Welcome to the INZHIR website! There's nothing here yet :<
             </p>
         </div>
         <div class="sub-block">
             <p>
-                Впрочем, можно пока полюбоваться красивым оформлением сайта :3
+                In the meantime, you can admire the beautiful design of the site :3
             </p>
         </div>
     </div>

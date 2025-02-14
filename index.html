@@ -6,11 +6,11 @@
     <title>INZHIR - Source Engine</title>
 
     <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
-	<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
-	<link rel="shortcut icon" href="/favicon/favicon.ico" />
-	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-	<meta name="apple-mobile-web-app-title" content="INZHIR" />
-	<link rel="manifest" href="/favicon/site.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="INZHIR" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
     <style>
         /* Подключение шрифтов */
         @import url('https://fonts.googleapis.com/css2?family=Century+Gothic:wght@700&display=swap');
@@ -58,24 +58,53 @@
             margin: 15px 0;
             box-shadow: 0 0 10px rgba(255, 140, 66, 0.2);
             transition: box-shadow 0.3s ease; /* Плавное изменение тени */
+            position: relative;
+            width: 100%; /* Ширина подблока */
+            height: 150px; /* Высота подблока (квадратный вид) */
+            display: flex;
+            align-items: center;
+            overflow: hidden; /* Скрываем выходящий за пределы контент */
         }
 
-        .sub-block:hover {
-            box-shadow: 0 0 15px rgba(255, 140, 66, 0.5); /* Подсветка при наведении */
+        .sub-block::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px; /* Толщина линии */
+            background: #ff5200; /* Цвет линии */
+        }
+
+        .sub-block::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 100px; /* Ширина затухания */
+            background: linear-gradient(to right, transparent, rgba(30, 30, 30, 0.8)); /* Градиент для затухания */
         }
 
         .sub-block p {
             font-size: 1.1rem;
             line-height: 1.6;
             margin: 0;
+            padding-left: 20px; /* Отступ текста от линии */
+            text-align: left; /* Текст выровнен по левому краю */
+            z-index: 1; /* Текст поверх градиента */
+        }
+
+        .sub-block:hover {
+            box-shadow: 0 0 15px rgba(255, 140, 66, 0.5); /* Подсветка при наведении */
         }
 
         @keyframes glow {
             0% {
-                text-shadow: 0 0 3px #ff8c42, 0 0 6px #ff8c42; /* Меньше свечения */
+                text-shadow: 0 0 3px #ff5200, 0 0 6px #cc4100; /* Меньше свечения */
             }
             100% {
-                text-shadow: 0 0 6px #ff8c42, 0 0 12px #ff8c42; /* Меньше свечения */
+                text-shadow: 0 0 6px #ff5200, 0 0 12px #cc4100; /* Меньше свечения */
             }
         }
 
@@ -109,7 +138,7 @@
         </div>
         <div class="sub-block">
             <p>
-                The website is planned to be a helper for Source Engine mappers and developers
+                The website is planned to be a helper for Source Engine mappers and developers.
             </p>
         </div>
     </div>

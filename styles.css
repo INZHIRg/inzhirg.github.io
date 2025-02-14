@@ -91,25 +91,27 @@ h1 {
     font-size: 1.5em;
     text-align: center; /* Центрируем заголовок */
     width: 100%; /* Занимает всю ширину */
-    display:
-block; /* Заголовок занимает всю ширину */
+    display: block; /* Заголовок занимает всю ширину */
+    padding: 0; /* Убираем внутренние отступы */
 }
 
-
+/* Стили для описания в подблоке */
 .sub-block p {
-color: #E0E0E0;
-font-size: 1em;
-line-height: 1.5;
-text-align: center; / Центрируем описание /
-margin-top: 15px; / Отступ сверху /
-width: 100%; / Занимает всю ширину */
+    color: #E0E0E0;
+    font-size: 1em;
+    line-height: 1.5;
+    text-align: center; /* Центрируем описание */
+    margin-top: 15px; /* Отступ сверху */
+    width: 100%; /* Занимает всю ширину */
+    padding: 0; /* Убираем внутренние отступы */
 }
+
 
 
 .video-container {
 position: relative;
 width: 100%;
-padding-bottom: 56.25%; / Соотношение сторон 16:9 */
+padding-bottom: 56.25%; 
 margin-bottom: 20px;
 }
 

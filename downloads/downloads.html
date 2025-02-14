@@ -1,7 +1,109 @@
-<!DOCTYPE html> 
-<html> 
-<body> 
-<h1>Source engine</h1> 
-<p>Луночка адский босс</p> 
-</body> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INZHIR: Source Engine Prefabs - Downloads</title>
+    <style>
+        body {
+            background: #0a0a0a;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #ff5200;
+            margin-bottom: 20px;
+        }
+
+        .downloads-container {
+            background: rgba(20, 20, 20, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 0 15px rgba(255, 140, 66, 0.3);
+        }
+
+        .download-item {
+            background: rgba(30, 30, 30, 0.8);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            box-shadow: 0 0 10px rgba(255, 140, 66, 0.2);
+            transition: box-shadow 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .download-item:hover {
+            box-shadow: 0 0 15px rgba(255, 140, 66, 0.5);
+        }
+
+        .download-item h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #ff5200;
+        }
+
+        .download-item p {
+            margin: 5px 0 0;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        .download-button {
+            background: #ff5200;
+            color: #fff;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+            text-decoration: none;
+        }
+
+        .download-button:hover {
+            background: #cc4100;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>INZHIR</h1>
+    <div class="downloads-container">
+        <div class="download-item">
+            <div>
+                <h3>Prefab Pack 1</h3>
+                <p>Contains basic Source Engine prefabs.</p>
+            </div>
+            <a href="files/prefab_pack_1.zip" download class="download-button">Download</a>
+        </div>
+        <div class="download-item">
+            <div>
+                <h3>Prefab Pack 2</h3>
+                <p>Advanced prefabs for Source Engine.</p>
+            </div>
+            <a href="files/prefab_pack_2.zip" download class="download-button">Download</a>
+        </div>
+        <div class="download-item">
+            <div>
+                <h3>Texture Pack</h3>
+                <p>High-quality textures for Source Engine.</p>
+            </div>
+            <a href="files/texture_pack.zip" download class="download-button">Download</a>
+        </div>
+    </div>
+</body>
 </html>

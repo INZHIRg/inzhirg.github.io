@@ -1,4 +1,3 @@
-/* Основные стили для body */
 body {
     background: #0a0a0a; /* Темный фон */
     color: #fff; /* Белый текст */
@@ -8,13 +7,10 @@ body {
     padding: 0;
     min-height: 100vh; /* Минимальная высота на весь экран */
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    position: relative; /* Для позиционирования футера */
+    align-items: center;
 }
 
-/* Заголовок */
 h1 {
     font-family: 'Century Gothic', sans-serif;
     font-weight: bold;
@@ -25,7 +21,6 @@ h1 {
     animation: glow 2s infinite alternate; /* Анимация свечения */
 }
 
-/* Анимация свечения для заголовка */
 @keyframes glow {
     0% {
         text-shadow: 0 0 3px #ff5200, 0 0 6px #cc4100; /* Меньше свечения */
@@ -35,8 +30,31 @@ h1 {
     }
 }
 
-/* Контейнер для текстовых блоков */
-.text-block {
+.nav-buttons {
+    margin-bottom: 20px; /* Отступ снизу */
+    display: flex;
+    gap: 10px; /* Расстояние между кнопками */
+}
+
+.nav-button {
+    background: #ff5200; /* Оранжевый цвет */
+    color: #fff; /* Белый текст */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Bahnschrift', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease; /* Плавные переходы */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.nav-button:hover {
+    background: #cc4100; /* Темно-оранжевый цвет */
+    transform: scale(1.05); /* Увеличение размера */
+}
+
+.text-block, .downloads-container {
     background: rgba(20, 20, 20, 0.9); /* Темный фон блока */
     padding: 30px;
     border-radius: 10px;
@@ -47,8 +65,7 @@ h1 {
     box-sizing: border-box; /* Учитываем padding в ширине */
 }
 
-/* Подблоки внутри текстового блока */
-.sub-block {
+.sub-block, .download-item {
     background: rgba(30, 30, 30, 0.8); /* Фон подблоков */
     padding: 15px;
     border-radius: 8px;
@@ -57,14 +74,12 @@ h1 {
     transition: box-shadow 0.3s ease; /* Плавное изменение тени */
     position: relative;
     width: 100%; /* Ширина подблока */
-    height: 150px; /* Высота подблока (квадратный вид) */
     display: flex;
     align-items: center;
     overflow: hidden; /* Скрываем выходящий за пределы контент */
     box-sizing: border-box; /* Учитываем padding в ширине */
 }
 
-/* Линия слева в подблоке */
 .sub-block::before {
     content: '';
     position: absolute;
@@ -75,7 +90,6 @@ h1 {
     background: #ff5200; /* Цвет линии */
 }
 
-/* Градиент справа в подблоке */
 .sub-block::after {
     content: '';
     position: absolute;
@@ -86,8 +100,7 @@ h1 {
     background: linear-gradient(to right, transparent, rgba(30, 30, 30, 0.8)); /* Градиент для затухания */
 }
 
-/* Текст внутри подблоков */
-.sub-block p {
+.sub-block p, .download-item p {
     font-size: 1.1rem;
     line-height: 1.6;
     margin: 0;
@@ -96,56 +109,16 @@ h1 {
     z-index: 1; /* Текст поверх градиента */
 }
 
-/* Эффект при наведении на подблок */
-.sub-block:hover {
+.sub-block:hover, .download-item:hover {
     box-shadow: 0 0 15px rgba(255, 140, 66, 0.5); /* Подсветка при наведении */
 }
 
-/* Контейнер для загрузок */
-.downloads-container {
-    background: rgba(20, 20, 20, 0.9); /* Темный фон блока */
-    padding: 30px;
-    border-radius: 10px;
-    width: 90%; /* Блок занимает 90% ширины экрана */
-    max-width: 600px; /* Максимальная ширина блока */
-    box-shadow: 0 0 15px rgba(255, 140, 66, 0.3);
-    margin: 20px;
-}
-
-/* Элемент загрузки */
 .download-item {
-    background: rgba(30, 30, 30, 0.8); /* Фон элемента */
-    padding: 15px;
-    border-radius: 8px;
-    margin: 15px 0;
-    box-shadow: 0 0 10px rgba(255, 140, 66, 0.2);
-    transition: box-shadow 0.3s ease; /* Плавное изменение тени */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Эффект при наведении на элемент загрузки */
-.download-item:hover {
-    box-shadow: 0 0 15px rgba(255, 140, 66, 0.5); /* Подсветка при наведении */
-}
-
-/* Заголовок элемента загрузки */
-.download-item h3 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #ff5200; /* Оранжевый цвет */
-}
-
-/* Описание элемента загрузки */
-.download-item p {
-    margin: 5px 0 0;
-    font-size: 0.9rem;
-    color: #ccc; /* Светло-серый цвет */
-}
-
-/* Кнопки (общие стили для всех кнопок) */
-.nav-button,
 .download-button {
     background: #ff5200; /* Оранжевый цвет */
     color: #fff; /* Белый текст */
@@ -159,24 +132,12 @@ h1 {
     text-decoration: none; /* Убираем подчеркивание */
 }
 
-/* Эффект при наведении на кнопку */
-.nav-button:hover,
 .download-button:hover {
     background: #cc4100; /* Темно-оранжевый цвет */
     transform: scale(1.05); /* Увеличение размера */
 }
 
-/* Контейнер для кнопок навигации */
-.nav-buttons {
-    margin-bottom: 20px; /* Отступ снизу */
-    display: flex;
-    gap: 10px; /* Расстояние между кнопками */
-}
-
-/* Футер */
 footer {
-    position: absolute;
-    bottom: 0;
     width: 100%;
     padding: 10px 0;
     background: rgba(20, 20, 20, 0.9); /* Темный фон футера */
@@ -184,26 +145,15 @@ footer {
     text-align: center;
     font-size: 0.9rem;
     color: #ccc; /* Светло-серый цвет */
+    margin-top: auto; /* Футер прижимается к низу */
 }
 
-/* Ссылка в футере */
 footer a {
     color: #ff5200; /* Оранжевый цвет */
     text-decoration: none; /* Убираем подчеркивание */
     transition: color 0.3s ease; /* Плавное изменение цвета */
 }
 
-/* Эффект при наведении на ссылку */
 footer a:hover {
     color: #cc4100; /* Темно-оранжевый цвет */
-}
-
-/* Линия в конце футера */
-footer::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 1px;
-    background: #ff5200; /* Оранжевая линия */
-    margin-top: 10px;
 }

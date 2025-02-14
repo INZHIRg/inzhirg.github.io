@@ -213,3 +213,11 @@ footer a:hover {
 
 
 
+}
+
+        /* Стили для виджета перевода */
+        #google_translate_element {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }

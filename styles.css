@@ -72,13 +72,13 @@ h1 {
 font-size: 1.1rem;
 line-height: 1.6;
 margin: 0;
-padding-left: 20px; /* Отступ текста от линии /
-text-align: left; / Текст выровнен по левому краю /
-z-index: 1; / Текст поверх градиента */
+padding-left: 20px; 
+text-align: left; 
+z-index: 1; 
 }
 
 .sub-block:hover, .download-item:hover {
-box-shadow: 0 0 15px rgba(255, 140, 66, 0.5); /* Подсветка при наведении */
+box-shadow: 0 0 15px rgba(255, 140, 66, 0.5);
 }
 
 .download-item {
@@ -88,7 +88,7 @@ align-items: center;
 }
 
 .download-button {
-background: #ff5200; /* Оранжевый цвет /
+background: #ff5200; 
 color: #fff; / Белый текст /
 padding: 10px 20px;
 border: none;
@@ -96,13 +96,13 @@ border-radius: 5px;
 font-family: 'Bahnschrift', sans-serif;
 font-size: 1rem;
 cursor: pointer;
-transition: background 0.3s ease, transform 0.2s ease; / Плавные переходы /
-text-decoration: none; / Убираем подчеркивание */
+transition: background 0.3s ease, transform 0.2s ease; 
+text-decoration: none; 
 }
 
 .download-button:hover {
-background: #cc4100; /* Темно-оранжевый цвет /
-transform: scale(1.05); / Увеличение размера */
+background: #cc4100; 
+transform: scale(1.05); 
 }
 
 /* Стили для подблоков */
@@ -115,9 +115,9 @@ transform: scale(1.05); / Увеличение размера */
     transition: box-shadow 0.3s ease; /* Плавное изменение тени */
     width: 100%; /* Ширина подблока */
     display: flex;
-    flex-direction: column; /* Элементы выстраиваются вертикально */
-    align-items: flex-start; /* Выравниваем элементы по левому краю */
-    box-sizing: border-box; /* Учитываем padding в ширине */
+    flex-direction: column; 
+    align-items: flex-start; 
+    box-sizing: border-box; 
 }
 
 /* Стили для заголовка в подблоке */

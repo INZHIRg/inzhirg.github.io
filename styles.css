@@ -1,39 +1,73 @@
-/* Подключение шрифтов */
-@import url('https://fonts.googleapis.com/css2?family=Century+Gothic:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bahnschrift&display=swap');
-
 /* Основные стили для body */
 body {
     background: #0a0a0a; /* Темный фон */
     color: #fff; /* Белый текст */
     font-family: 'Bahnschrift', sans-serif; /* Основной шрифт */
     text-align: center; /* Выравнивание текста по центру */
-    margin: 0; /* Убираем отступы */
-    padding: 0; /* Убираем внутренние отступы */
+    margin: 0;
+    padding: 0;
     height: 100vh; /* Высота на весь экран */
     display: flex;
-    justify-content: center; /* Центрирование по горизонтали */
-    align-items: center; /* Центрирование по вертикали */
-    flex-direction: column; /* Элементы в колонку */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-/* Стили для заголовка h1 */
+/* Заголовок */
 h1 {
-    font-family: 'Century Gothic', sans-serif; /* Шрифт заголовка */
-    font-weight: bold; /* Жирный текст */
-    font-size: 6rem; /* Размер шрифта */
-    text-transform: uppercase; /* Все буквы заглавные */
+    font-family: 'Century Gothic', sans-serif;
+    font-weight: bold;
+    font-size: 6rem;
+    text-transform: uppercase;
     color: #ff5200; /* Оранжевый цвет */
-    margin-bottom: 20px; /* Отступ снизу */
+    margin-bottom: 20px;
     animation: glow 2s infinite alternate; /* Анимация свечения */
 }
 
-/* Стили для текстового блока */
+/* Анимация свечения для заголовка */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 3px #ff5200, 0 0 6px #cc4100; /* Меньше свечения */
+    }
+    100% {
+        text-shadow: 0 0 6px #ff5200, 0 0 12px #cc4100; /* Больше свечения */
+    }
+}
+
+/* Контейнер для текстовых блоков */
 .text-block {
     background: rgba(20, 20, 20, 0.9); /* Темный фон с прозрачностью */
-    padding: 30px; /* Внутренние отступы */
-    border-radius: 10px; /* Закругленные углы */
-    width: 90%; /* Ширина блока */
-    max-width: 1200px; /* Максимальная ширина */
-    margin: 20px; /* Внешние отступы */
-    box-shadow: 0 0 15px rgba(255, 140,
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 0 15px rgba(255, 140, 66, 0.3); /* Тень с оранжевым оттенком */
+    margin: 20px;
+}
+
+/* Подблоки внутри текстового блока */
+.sub-block {
+    background: rgba(30, 30, 30, 0.8); /* Темный фон с прозрачностью */
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    box-shadow: 0 0 10px rgba(255, 140, 66, 0.2); /* Тень с оранжевым оттенком */
+    transition: box-shadow 0.3s ease; /* Плавное изменение тени */
+}
+
+/* Эффект при наведении на подблок */
+.sub-block:hover {
+    box-shadow: 0 0 15px rgba(255, 140, 66, 0.5); /* Увеличение тени */
+}
+
+/* Текст внутри подблоков */
+.sub-block p {
+    margin: 0;
+    font-size: 1rem;
+    color: #ccc; /* Светло-серый цвет */
+}
+
+/* Контейнер для кнопок навигации */
+.nav-buttons {
+    margin-bottom: 20px;
+    display: flex;

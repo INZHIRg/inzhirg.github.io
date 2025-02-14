@@ -179,6 +179,7 @@ footer a:hover {
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    aspect-ratio: 1 / 1; /* Делаем блок квадратным */
 }
 
 .tutorial-category:hover {
@@ -189,8 +190,9 @@ footer a:hover {
 /* Стили для изображения */
 .tutorial-category img {
     width: 100%;
-    height: 200px; /* Фиксированная высота */
-    object-fit: contain; /* Изображение заполняет контейнер Да */
+    height: 70%; /* Изображение занимает 70% высоты блока */
+    object-fit: contain; /* Изображение заполняет контейнер */
+    padding: 10px; /* Отступы внутри изображения */
 }
 
 /* Стили для текста */
@@ -201,5 +203,17 @@ footer a:hover {
     text-align: center;
     background: rgba(30, 30, 30, 0.8); /* Темный фон текста */
     width: 100%;
+    height: 30%; /* Текст занимает 30% высоты блока */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 600px) {
+    .tutorials-container {
+        grid-template-columns: 1fr; /* 1 колонка на мобильных */
+    }
+}
+
 

@@ -250,3 +250,23 @@ footer a:hover {
     font-size: 1em;
     line-height: 1.5;
 }
+
+/* Стили для кнопки "Back: Tutorials" */
+.back-button {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.back-button .nav-button {
+    background-color: #FF8C42;
+    color: #1E1E1E;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-button .nav-button:hover {
+    background-color: #E67E22;
+}

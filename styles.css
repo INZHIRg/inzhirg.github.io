@@ -1,159 +1,44 @@
-body {
-    background: #0a0a0a; /* Темный фон */
-    color: #fff; /* Белый текст */
-    font-family: 'Bahnschrift', sans-serif; /* Основной шрифт */
-    text-align: center; /* Выравнивание текста по центру */
-    margin: 0;
-    padding: 0;
-    min-height: 100vh; /* Минимальная высота на весь экран */
+/* Стили для контейнера категорий */
+.tutorials-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+    gap: 20px; /* Расстояние между элементами */
+    max-width: 800px; /* Максимальная ширина контейнера */
+    margin: 20px auto; /* Центрирование */
+    padding: 0 20px; /* Отступы по бокам */
+}
+
+/* Стили для каждой категории */
+.tutorial-category {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-h1 {
-    font-family: 'Century Gothic', sans-serif;
-    font-weight: bold;
-    font-size: 6rem;
-    text-transform: uppercase;
-    color: #ff5200; /* Оранжевый цвет */
-    margin-bottom: 20px;
-    animation: glow 2s infinite alternate; /* Анимация свечения */
-}
-
-@keyframes glow {
-    0% {
-        text-shadow: 0 0 3px #ff5200, 0 0 6px #cc4100; /* Меньше свечения */
-    }
-    100% {
-        text-shadow: 0 0 6px #ff5200, 0 0 12px #cc4100; /* Больше свечения */
-    }
-}
-
-.nav-buttons {
-    margin-bottom: 20px; /* Отступ снизу */
-    display: flex;
-    gap: 10px; /* Расстояние между кнопками */
-}
-
-.nav-button {
-    background: #ff5200; /* Оранжевый цвет */
-    color: #fff; /* Белый текст */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-family: 'Bahnschrift', sans-serif;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease; /* Плавные переходы */
-    text-decoration: none; /* Убираем подчеркивание */
-}
-
-.nav-button:hover {
-    background: #cc4100; /* Темно-оранжевый цвет */
-    transform: scale(1.05); /* Увеличение размера */
-}
-
-.text-block, .downloads-container {
-    background: rgba(20, 20, 20, 0.9); /* Темный фон блока */
-    padding: 30px;
+    text-decoration: none;
+    color: #fff;
+    background: rgba(20, 20, 20, 0.9); /* Темный фон */
     border-radius: 10px;
-    width: 90%; /* Блок занимает 90% ширины экрана */
-    max-width: 1200px; /* Максимальная ширина блока */
-    margin: 20px;
-    box-shadow: 0 0 15px rgba(255, 140, 66, 0.3);
-    box-sizing: border-box; /* Учитываем padding в ширине */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.sub-block, .download-item {
-    background: rgba(30, 30, 30, 0.8); /* Фон подблоков */
-    padding: 15px;
-    border-radius: 8px;
-    margin: 15px 0;
-    box-shadow: 0 0 10px rgba(255, 140, 66, 0.2);
-    transition: box-shadow 0.3s ease; /* Плавное изменение тени */
-    position: relative;
-    width: 100%; /* Ширина подблока */
-    display: flex;
-    align-items: center;
-    overflow: hidden; /* Скрываем выходящий за пределы контент */
-    box-sizing: border-box; /* Учитываем padding в ширине */
+.tutorial-category:hover {
+    transform: scale(1.05); /* Увеличение при наведении */
+    box-shadow: 0 0 15px rgba(255, 140, 66, 0.5); /* Подсветка */
 }
 
-.sub-block::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 4px; /* Толщина линии */
-    background: #ff5200; /* Цвет линии */
-}
-
-.sub-block::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 50px; /* Ширина затухания */
-    background: linear-gradient(to right, transparent, rgba(30, 30, 30, 0.8)); /* Градиент для затухания */
-}
-
-.sub-block p, .download-item p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin: 0;
-    padding-left: 20px; /* Отступ текста от линии */
-    text-align: left; /* Текст выровнен по левому краю */
-    z-index: 1; /* Текст поверх градиента */
-}
-
-.sub-block:hover, .download-item:hover {
-    box-shadow: 0 0 15px rgba(255, 140, 66, 0.5); /* Подсветка при наведении */
-}
-
-.download-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.download-button {
-    background: #ff5200; /* Оранжевый цвет */
-    color: #fff; /* Белый текст */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-family: 'Bahnschrift', sans-serif;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease; /* Плавные переходы */
-    text-decoration: none; /* Убираем подчеркивание */
-}
-
-.download-button:hover {
-    background: #cc4100; /* Темно-оранжевый цвет */
-    transform: scale(1.05); /* Увеличение размера */
-}
-
-footer {
+/* Стили для изображения */
+.tutorial-category img {
     width: 100%;
-    padding: 10px 0;
-    background: rgba(20, 20, 20, 0.9); /* Темный фон футера */
-    border-top: 1px solid #ff5200; /* Оранжевая линия сверху */
+    height: 200px; /* Фиксированная высота */
+    object-fit: cover; /* Изображение заполняет контейнер */
+}
+
+/* Стили для текста */
+.tutorial-category span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px;
     text-align: center;
-    font-size: 0.9rem;
-    color: #ccc; /* Светло-серый цвет */
-    margin-top: auto; /* Футер прижимается к низу */
-}
-
-footer a {
-    color: #ff5200; /* Оранжевый цвет */
-    text-decoration: none; /* Убираем подчеркивание */
-    transition: color 0.3s ease; /* Плавное изменение цвета */
-}
-
-footer a:hover {
-    color: #cc4100; /* Темно-оранжевый цвет */
+    background: rgba(30, 30, 30, 0.8); /* Темный фон текста */
+    width: 100%;
 }

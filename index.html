@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INZHIR - Source Engine</title>
+    <title>INZHIR: Source Engine tutorials</title>
 
     <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
@@ -51,40 +51,42 @@
             box-sizing: border-box; /* Учитываем padding в ширине */
         }
 
-        .sub-block {
-            background: rgba(30, 30, 30, 0.8); /* Фон подблоков */
-            padding: 15px;
-            border-radius: 8px;
-            margin: 15px 0;
-            box-shadow: 0 0 10px rgba(255, 140, 66, 0.2);
-            transition: box-shadow 0.3s ease; /* Плавное изменение тени */
-            position: relative;
-            width: 100%; /* Ширина подблока */
-            height: 150px; /* Высота подблока (квадратный вид) */
-            display: flex;
-            align-items: center;
-            overflow: hidden; /* Скрываем выходящий за пределы контент */
-        }
+		.sub-block {
+			background: rgba(30, 30, 30, 0.8); /* Фон подблоков */
+			padding: 15px;
+			border-radius: 8px;
+			margin: 15px 0;
+			box-shadow: 0 0 10px rgba(255, 140, 66, 0.2);
+			transition: box-shadow 0.3s ease; /* Плавное изменение тени */
+			position: relative;
+			width: 100%; /* Ширина подблока */
+			height: 150px; /* Высота подблока (квадратный вид) */
+			display: flex;
+			align-items: center;
+			overflow: hidden; /* Скрываем выходящий за пределы контент */
+			box-sizing: border-box; /* Учитываем padding в ширине */
+		}
 
-        .sub-block::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 4px; /* Толщина линии */
-            background: #ff5200; /* Цвет линии */
-        }
+		.sub-block::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			width: 4px; /* Толщина линии */
+			background: #ff5200; /* Цвет линии */
+		}
 
-        .sub-block::after {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            width: 100px; /* Ширина затухания */
-            background: linear-gradient(to right, transparent, rgba(30, 30, 30, 0.8)); /* Градиент для затухания */
-        }
+		.sub-block::after {
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			width: 50px; /* Ширина затухания (уменьшена) */
+			background: linear-gradient(to right, transparent, rgba(30, 30, 30, 0.8)); /* Градиент для затухания */
+		}
+
 
         .sub-block p {
             font-size: 1.1rem;

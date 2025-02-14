@@ -168,8 +168,8 @@ h1 {
 /* Контейнер для кнопок навигации */
 .nav-buttons {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 10px;
+    left: 10px;
     display: flex;
     gap: 10px; /* Расстояние между кнопками */
 }

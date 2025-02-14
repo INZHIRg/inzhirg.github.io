@@ -56,6 +56,41 @@ h1 {
     background: #cc4100; /* Темно-оранжевый цвет */
     transform: scale(1.05); /* Увеличение размера */
 }
+.text-block, .downloads-container {
+background: rgba(20, 20, 20, 0.9);
+padding: 30px;
+border-radius: 10px;
+width: 90%; 
+max-width: 1200px; 
+margin: 20px;
+box-shadow: 0 0 15px rgba(255, 140, 66, 0.3);
+box-sizing: border-box; 
+}
+
+.sub-block, .download-item {
+background: rgba(30, 30, 30, 0.8); 
+padding: 15px;
+border-radius: 8px;
+margin: 15px 0;
+box-shadow: 0 0 10px rgba(255, 140, 66, 0.2);
+transition: box-shadow 0.3s ease; 
+position: relative;
+width: 100%; 
+display: flex;
+align-items: center;
+overflow: hidden; 
+box-sizing: border-box; 
+}
+
+.sub-block::before {
+content: '';
+position: absolute;
+left: 0;
+top: 0;
+bottom: 0;
+width: 4px; 
+background: #ff5200;
+}
 
 /* Стили для текстовых блоков и контейнеров */
 .text-block, .downloads-container {
@@ -66,7 +101,7 @@ h1 {
     max-width: 1200px; /* Максимальная ширина блока */
     margin: 20px;
     box-shadow: 0 0 15px rgba(255, 140, 66, 0.3);
-    box-sizing: border-box; /* Учитываем padding в ширине */
+    box-sizing: border-box; 
 }
 .sub-block p, .download-item p {
 font-size: 1.1rem;

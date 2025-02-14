@@ -68,8 +68,43 @@ h1 {
     box-shadow: 0 0 15px rgba(255, 140, 66, 0.3);
     box-sizing: border-box; /* Учитываем padding в ширине */
 }
+.sub-block p, .download-item p {
+font-size: 1.1rem;
+line-height: 1.6;
+margin: 0;
+padding-left: 20px; /* Отступ текста от линии /
+text-align: left; / Текст выровнен по левому краю /
+z-index: 1; / Текст поверх градиента */
+}
 
-/* Стили для подблоков */
+.sub-block:hover, .download-item:hover {
+box-shadow: 0 0 15px rgba(255, 140, 66, 0.5); /* Подсветка при наведении */
+}
+
+.download-item {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.download-button {
+background: #ff5200; /* Оранжевый цвет /
+color: #fff; / Белый текст /
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+font-family: 'Bahnschrift', sans-serif;
+font-size: 1rem;
+cursor: pointer;
+transition: background 0.3s ease, transform 0.2s ease; / Плавные переходы /
+text-decoration: none; / Убираем подчеркивание */
+}
+
+.download-button:hover {
+background: #cc4100; /* Темно-оранжевый цвет /
+transform: scale(1.05); / Увеличение размера */
+}
+
 /* Стили для подблоков */
 .sub-block {
     background: rgba(30, 30, 30, 0.8); /* Фон подблоков */

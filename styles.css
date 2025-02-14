@@ -1,4 +1,4 @@
-/* Основные стили для body */
+/* Основные стили */
 body {
     background: #0a0a0a; /* Темный фон */
     color: #fff; /* Белый текст */
@@ -6,11 +6,11 @@ body {
     text-align: center; /* Выравнивание текста по центру */
     margin: 0;
     padding: 0;
-    height: 100vh; /* Высота на весь экран */
+    min-height: 100vh; /* Минимальная высота на весь экран */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 
 /* Заголовок */
@@ -34,8 +34,8 @@ h1 {
     }
 }
 
-/* Контейнер для загрузок */
-.downloads-container {
+/* Контейнер для контента */
+.container {
     background: rgba(20, 20, 20, 0.9); /* Темный фон с прозрачностью */
     padding: 30px;
     border-radius: 10px;

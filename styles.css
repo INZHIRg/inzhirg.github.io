@@ -6,11 +6,12 @@ body {
     text-align: center; /* Выравнивание текста по центру */
     margin: 0;
     padding: 0;
-    height: 100vh; /* Высота на весь экран */
+    min-height: 100vh; /* Минимальная высота на весь экран */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    position: relative; /* Для позиционирования футера */
 }
 
 /* Заголовок */
@@ -167,9 +168,7 @@ h1 {
 
 /* Контейнер для кнопок навигации */
 .nav-buttons {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+    margin-bottom: 20px; /* Отступ снизу */
     display: flex;
     gap: 10px; /* Расстояние между кнопками */
 }
@@ -179,4 +178,28 @@ h1 {
     position: absolute;
     top: 20px;
     right: 20px;
+}
+
+/* Футер */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(20, 20, 20, 0.9); /* Темный фон */
+    padding: 10px 0;
+    box-shadow: 0 0 10px rgba(255, 140, 66, 0.2);
+    font-size: 0.9rem;
+    color: #ccc; /* Светло-серый цвет */
+}
+
+/* Ссылка в футере */
+footer a {
+    color: #ff5200; /* Оранжевый цвет */
+    text-decoration: none; /* Убираем подчеркивание */
+    transition: color 0.3s ease; /* Плавное изменение цвета */
+}
+
+/* Эффект при наведении на ссылку */
+footer a:hover {
+    color: #cc4100; /* Темно-оранжевый цвет */
 }

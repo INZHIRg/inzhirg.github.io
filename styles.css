@@ -1,138 +1,39 @@
+/* Подключение шрифтов */
+@import url('https://fonts.googleapis.com/css2?family=Century+Gothic:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bahnschrift&display=swap');
+
 /* Основные стили для body */
 body {
     background: #0a0a0a; /* Темный фон */
     color: #fff; /* Белый текст */
     font-family: 'Bahnschrift', sans-serif; /* Основной шрифт */
     text-align: center; /* Выравнивание текста по центру */
-    margin: 0;
-    padding: 0;
+    margin: 0; /* Убираем отступы */
+    padding: 0; /* Убираем внутренние отступы */
     height: 100vh; /* Высота на весь экран */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    flex-direction: column; /* Элементы в колонку */
 }
 
-/* Заголовок */
+/* Стили для заголовка h1 */
 h1 {
-    font-family: 'Century Gothic', sans-serif;
-    font-weight: bold;
-    font-size: 6rem;
-    text-transform: uppercase;
+    font-family: 'Century Gothic', sans-serif; /* Шрифт заголовка */
+    font-weight: bold; /* Жирный текст */
+    font-size: 6rem; /* Размер шрифта */
+    text-transform: uppercase; /* Все буквы заглавные */
     color: #ff5200; /* Оранжевый цвет */
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Отступ снизу */
     animation: glow 2s infinite alternate; /* Анимация свечения */
 }
 
-/* Анимация свечения для заголовка */
-@keyframes glow {
-    0% {
-        text-shadow: 0 0 3px #ff5200, 0 0 6px #cc4100; /* Меньше свечения */
-    }
-    100% {
-        text-shadow: 0 0 6px #ff5200, 0 0 12px #cc4100; /* Больше свечения */
-    }
-}
-
-/* Контейнер для загрузок */
-.downloads-container {
+/* Стили для текстового блока */
+.text-block {
     background: rgba(20, 20, 20, 0.9); /* Темный фон с прозрачностью */
-    padding: 30px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 800px;
-    box-shadow: 0 0 15px rgba(255, 140, 66, 0.3); /* Тень с оранжевым оттенком */
-    margin: 20px;
-}
-
-/* Элемент загрузки */
-.download-item {
-    background: rgba(30, 30, 30, 0.8); /* Темный фон с прозрачностью */
-    padding: 15px;
-    border-radius: 8px;
-    margin: 15px 0;
-    box-shadow: 0 0 10px rgba(255, 140, 66, 0.2); /* Тень с оранжевым оттенком */
-    transition: box-shadow 0.3s ease; /* Плавное изменение тени */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Эффект при наведении на элемент загрузки */
-.download-item:hover {
-    box-shadow: 0 0 15px rgba(255, 140, 66, 0.5); /* Увеличение тени */
-}
-
-/* Заголовок элемента загрузки */
-.download-item h3 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #ff5200; /* Оранжевый цвет */
-}
-
-/* Описание элемента загрузки */
-.download-item p {
-    margin: 5px 0 0;
-    font-size: 0.9rem;
-    color: #ccc; /* Светло-серый цвет */
-}
-
-/* Кнопка загрузки */
-.download-button {
-    background: #ff5200; /* Оранжевый цвет */
-    color: #fff; /* Белый текст */
-    padding: 8px 16px;
-    border: none;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease; /* Плавные переходы */
-    text-decoration: none; /* Убираем подчеркивание */
-}
-
-/* Эффект при наведении на кнопку загрузки */
-.download-button:hover {
-    background: #cc4100; /* Темно-оранжевый цвет */
-    transform: scale(1.05); /* Увеличение размера */
-}
-
-/* Контейнер для кнопок навигации */
-.nav-buttons {
-    margin-bottom: 20px;
-    display: flex;
-    gap: 10px; /* Расстояние между кнопками */
-}
-
-/* Кнопка навигации */
-.nav-button {
-    background: #ff5200; /* Оранжевый цвет */
-    color: #fff; /* Белый текст */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-family: 'Bahnschrift', sans-serif;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease; /* Плавные переходы */
-    text-decoration: none; /* Убираем подчеркивание */
-}
-
-/* Эффект при наведении на кнопку навигации */
-.nav-button:hover {
-    background: #cc4100; /* Темно-оранжевый цвет */
-    transform: scale(1.05); /* Увеличение размера */
-}
-
-/* Футер */
-.footer {
-    margin-top: 20px;
-    font-size: 0.9rem;
-    color: #ccc; /* Светло-серый цвет */
-}
-
-/* Контент */
-.content {
-    margin: 20px;
-    font-size: 1.2rem;
-    color: #ccc; /* Светло-серый цвет */
-}
+    padding: 30px; /* Внутренние отступы */
+    border-radius: 10px; /* Закругленные углы */
+    width: 90%; /* Ширина блока */
+    max-width: 1200px; /* Максимальная ширина */
+    margin: 20px; /* Внешние отступы */
+    box-shadow: 0 0 15px rgba(255, 140,

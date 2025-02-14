@@ -70,6 +70,7 @@ h1 {
 }
 
 /* Стили для подблоков */
+/* Стили для подблоков */
 .sub-block {
     background: rgba(30, 30, 30, 0.8); /* Фон подблоков */
     padding: 20px;
@@ -80,7 +81,7 @@ h1 {
     width: 100%; /* Ширина подблока */
     display: flex;
     flex-direction: column; /* Элементы выстраиваются вертикально */
-    align-items: center; /* Центрируем элементы по горизонтали */
+    align-items: flex-start; /* Выравниваем элементы по левому краю */
     box-sizing: border-box; /* Учитываем padding в ширине */
 }
 
@@ -89,7 +90,7 @@ h1 {
     color: #FF8C42;
     margin-bottom: 15px;
     font-size: 1.5em;
-    text-align: center; /* Центрируем заголовок */
+    text-align: left; /* Выравниваем заголовок по левому краю */
     width: 100%; /* Занимает всю ширину */
     display: block; /* Заголовок занимает всю ширину */
     padding: 0; /* Убираем внутренние отступы */
@@ -100,11 +101,12 @@ h1 {
     color: #E0E0E0;
     font-size: 1em;
     line-height: 1.5;
-    text-align: center; /* Центрируем описание */
+    text-align: left; /* Выравниваем описание по левому краю */
     margin-top: 15px; /* Отступ сверху */
     width: 100%; /* Занимает всю ширину */
     padding: 0; /* Убираем внутренние отступы */
 }
+
 
 
 

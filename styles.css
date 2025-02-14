@@ -283,7 +283,7 @@ footer a:hover {
 }
 
 .back-button .nav-button {
-    background-color: #FF8C42;
+    background-color: #ff5200;
     color: #1E1E1E;
     padding: 10px 20px;
     border-radius: 5px;
@@ -293,5 +293,5 @@ footer a:hover {
 }
 
 .back-button .nav-button:hover {
-    background-color: #E67E22;
+    background-color: #ff5200;
 }

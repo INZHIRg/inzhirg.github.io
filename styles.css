@@ -190,7 +190,7 @@ footer a:hover {
 .tutorial-category img {
     width: 100%;
     height: 200px; /* Фиксированная высота */
-    object-fit: cover; /* Изображение заполняет контейнер */
+    object-fit: contain; /* Изображение заполняет контейнер */
 }
 
 /* Стили для текста */

@@ -8,9 +8,9 @@ body {
     padding: 0;
     min-height: 100vh; /* Минимальная высота на весь экран */
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     position: relative; /* Для позиционирования футера */
 }
 
@@ -173,21 +173,15 @@ h1 {
     gap: 10px; /* Расстояние между кнопками */
 }
 
-/* Стили для виджета перевода */
-#google_translate_element {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
 /* Футер */
 footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: rgba(20, 20, 20, 0.9); /* Темный фон */
     padding: 10px 0;
-    box-shadow: 0 0 10px rgba(255, 140, 66, 0.2);
+    background: rgba(20, 20, 20, 0.9); /* Темный фон футера */
+    border-top: 1px solid #ff5200; /* Оранжевая линия сверху */
+    text-align: center;
     font-size: 0.9rem;
     color: #ccc; /* Светло-серый цвет */
 }
@@ -202,4 +196,14 @@ footer a {
 /* Эффект при наведении на ссылку */
 footer a:hover {
     color: #cc4100; /* Темно-оранжевый цвет */
+}
+
+/* Линия в конце футера */
+footer::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #ff5200; /* Оранжевая линия */
+    margin-top: 10px;
 }

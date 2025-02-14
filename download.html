@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INZHIR: Source Engine Prefabs - Downloads</title>
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="INZHIR" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
     <style>
         body {
             background: #0a0a0a;
             color: #fff;
-            font-family: Arial, sans-serif;
+            font-family: 'Bahnschrift', sans-serif;
             text-align: center;
             margin: 0;
             padding: 0;
@@ -20,16 +26,20 @@
         }
 
         h1 {
-            font-size: 3rem;
+            font-family: 'Century Gothic', sans-serif;
+            font-weight: bold;
+            font-size: 6rem;
+            text-transform: uppercase;
             color: #ff5200;
             margin-bottom: 20px;
+            animation: glow 2s infinite alternate;
         }
 
         .downloads-container {
             background: rgba(20, 20, 20, 0.9);
-            padding: 20px;
+            padding: 30px;
             border-radius: 10px;
-            width: 80%;
+            width: 90%;
             max-width: 600px;
             box-shadow: 0 0 15px rgba(255, 140, 66, 0.3);
         }
@@ -78,10 +88,20 @@
             background: #cc4100;
             transform: scale(1.05);
         }
+
+        .nav-buttons {
+            margin: 20px 0; /* Отступ сверху и снизу */
+            display: flex;
+            gap: 10px; /* Расстояние между кнопками */
+        }
     </style>
 </head>
 <body>
     <h1>INZHIR</h1>
+    <div class="nav-buttons">
+        <a href="/" class="download-button">Home</a>
+        <a href="download.html" class="download-button">Downloads</a>
+    </div>
     <div class="downloads-container">
         <div class="download-item">
             <div>
@@ -106,4 +126,7 @@
         </div>
     </div>
 </body>
+			<p>
+                Alpha - 1402
+            </p>
 </html>
